@@ -8,24 +8,9 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-<<<<<<< HEAD
     type: QuestionType,
 ): Question {
-    return {
-        id: id,
-        name: name,
-        body: "",
-        type: type,
-        options: [],
-        expected: "",
-        points: 1,
-        published: false,
-    };
-=======
-    type: QuestionType
-): Question {
     return {};
->>>>>>> origin/task-forms
 }
 
 /**
@@ -36,11 +21,7 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-<<<<<<< HEAD
-    return question.expected.toLowerCase() === answer.trim().toLowerCase();
-=======
     return false;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -50,18 +31,7 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-<<<<<<< HEAD
-    if (question.type === `short_answer_question`) return true;
-
-    // Checking for mcq
-    const isAnOption = question.options.some(
-        (option: string): boolean => option === answer,
-    );
-
-    return isAnOption;
-=======
     return false;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -71,11 +41,7 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-<<<<<<< HEAD
-    return `${question.id}: ${question.name.slice(0, 10)}`;
-=======
     return "";
->>>>>>> origin/task-forms
 }
 
 /**
@@ -96,20 +62,7 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
-<<<<<<< HEAD
-    let formattedContent = `# ${question.name}\n${question.body}`;
-    if (question.options.length === 0) {
-        return formattedContent;
-    }
-
-    const options = question.options.map(
-        (option: string): string => "- " + option,
-    );
-
-    return formattedContent + `\n${options.join("\n")}`;
-=======
     return "";
->>>>>>> origin/task-forms
 }
 
 /**
@@ -117,17 +70,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-<<<<<<< HEAD
-    const updatedQuestion = {
-        ...question,
-        options: [...question.options],
-        name: newName,
-    };
-
-    return updatedQuestion;
-=======
     return question;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -136,17 +79,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-<<<<<<< HEAD
-    const updatedQuestion = {
-        ...question,
-        options: [...question.options],
-        published: !question.published,
-    };
-
-    return updatedQuestion;
-=======
     return question;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -156,19 +89,7 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-<<<<<<< HEAD
-    const newQuestion = {
-        ...oldQuestion,
-        id: id,
-        options: [...oldQuestion.options],
-        name: `Copy of ${oldQuestion.name}`,
-        published: false,
-    };
-
-    return newQuestion;
-=======
     return oldQuestion;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -179,16 +100,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-<<<<<<< HEAD
-    const updatedQuestion = {
-        ...question,
-        options: [...question.options, newOption],
-    };
-
-    return updatedQuestion;
-=======
     return question;
->>>>>>> origin/task-forms
 }
 
 /**
@@ -203,22 +115,7 @@ export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
-<<<<<<< HEAD
     { points }: { points: number },
 ): Question {
-    const newQuestion = {
-        ...contentQuestion,
-        options: [...contentQuestion.options],
-        id: id,
-        name: name,
-        points: points,
-        published: false,
-    };
-
-    return newQuestion;
-=======
-    { points }: { points: number }
-): Question {
     return contentQuestion;
->>>>>>> origin/task-forms
 }
