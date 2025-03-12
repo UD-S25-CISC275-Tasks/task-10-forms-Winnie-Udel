@@ -15,6 +15,9 @@ function App(): React.JSX.Element {
             <hr></hr>
             <CheckAnswer expectedAnswer="Answer"></CheckAnswer>
             <hr></hr>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
         </div>
     );
 }
