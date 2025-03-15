@@ -1,5 +1,10 @@
 import React from "react";
 import "./App.css";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
     return (
@@ -7,10 +12,28 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="Answer"></CheckAnswer>
+            <hr></hr>
+
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+
+            <hr></hr>
+            <MultipleChoiceQuestion
+                expectedAnswer="c"
+                options={["a", "b", "c"]}
+            ></MultipleChoiceQuestion>
+            <hr></hr>
         </div>
     );
 }
