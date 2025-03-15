@@ -23,6 +23,10 @@ function App(): React.JSX.Element {
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
+
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
         </div>
     );
 }
