@@ -27,6 +27,13 @@ function App(): React.JSX.Element {
             <hr></hr>
             <ChangeColor></ChangeColor>
             <hr></hr>
+
+            <hr></hr>
+            <MultipleChoiceQuestion
+                expectedAnswer="c"
+                options={["a", "b", "c"]}
+            ></MultipleChoiceQuestion>
+            <hr></hr>
         </div>
     );
 }
